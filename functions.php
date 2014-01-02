@@ -57,3 +57,20 @@ define( 'CCC_VERSION', '0.1.0' );
 	echo apply_filters( 'ccc_humans', $humans );
  }
  add_action( 'wp_head', 'ccc_header_meta' );
+
+function ccc_if_menu_member( $conditions ) {
+	$conditions[] = array(
+		'name' => 'User is Member',
+		'condition' => 'ccc_is_member',
+	);
+	return $conditions;
+}
+add_filter( 'if_menu_conditions', 'ccc_if_menu_member' );
+
+/**
+ * if user is logged in and is not a subscriber
+ * @return bool
+ */
+function ccc_is_member() {
+	return current_user_can( 'edit_posts' );
+}
