@@ -74,3 +74,28 @@ add_filter( 'if_menu_conditions', 'ccc_if_menu_member' );
 function ccc_is_member() {
 	return current_user_can( 'edit_posts' );
 }
+
+new CCC_Setup;
+class CCC_Setup {
+
+	var $bp_templates = array( 'bp_group', 'bp_members', 'bp_register', 'bp_activity', 'bp_blogs' );
+
+	function __construct() {
+		add_filter( 'resurrect_sidebar_enabled', array( $this, 'sidebar_enabled'     ) );
+		add_filter( 'ctfw_make_friendly',        array( $this, 'bp_templates' ), 10, 2 );
+	}
+
+	function sidebar_enabled( $enabled ) {
+		if ( in_array( get_post_type(), $this->bp_templates ) ) {
+			return false;
+		}
+		return $enabled;
+	}
+
+	function bp_templates( $rewrite, $template ) {
+		if ( in_array( $template, $this->bp_templates ) ) {
+			return 'bp';
+		}
+		return $rewrite;
+	}
+}

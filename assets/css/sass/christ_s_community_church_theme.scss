@@ -20,3 +20,133 @@ of the styles inside media queries.
 ******************************************************************/
 
 @import url("../../../resurrect/style.css");
+
+#buddypress {
+
+	ul.item-list {
+		clear: none;
+	}
+
+	div.item-list-tabs:first-child {
+		float: left;
+	}
+
+	#group-create-tabs {
+		float: none;
+	}
+
+	#item-nav {
+		width: 15%;
+		margin-right: 5%;
+		float: left;
+		div.item-list-tabs ul li {
+			float: none;
+		}
+	}
+
+	#item-body {
+		margin-left: 20%;
+	}
+
+	.feed {
+		// display: none;
+	}
+
+	.activity-type-tabs {
+		float: left;
+	}
+
+	div.item-list-tabs#subnav {
+		clear: none;
+		margin-top: 0;
+		float: none;
+
+		ul {
+			float: right;
+		}
+
+	}
+
+	.mejs-controls {
+		button {
+			padding: 0;
+			position: absolute;
+			height: 16px;
+			width: 16px;
+			border: 0;
+			background: transparent url(/wp-includes/js/mediaelement/controls.svg) no-repeat;
+		}
+		.mejs-mute button {
+			background-position: -16px -16px;
+		}
+		.mejs-unmute button {
+			background-position: -16px 0;
+		}
+		.mejs-pause button {
+			background-position: 0 -16px;
+		}
+	}
+	/* Forums
+	------------------------------------------------------------*/
+	#bbpress-forums {
+		clear: none;
+	}
+
+	/* Form Elements
+	------------------------------------------------------------*/
+	input[type="text"] {
+		background: white;
+		border-radius: 5px;
+		padding: .5em 1em;
+		line-height: 1em;
+	}
+
+	input[type="submit"] {
+		height: auto;
+	}
+
+	textarea {
+		background: white;
+	}
+
+	button {
+		padding: 1em 2em;
+	}
+
+	#whats-new:focus {
+		outline: none;
+		border: none;
+	}
+
+	/* Messages and Banners
+	------------------------------------------------------------*/
+	.standard-form#signup_form div div.error {
+		background: white;
+		color: black;
+		padding: .5em 1em .5em 2em;
+		border-left: 4px solid red;
+		box-shadow: 1px 1px 1px #ccc;
+	}
+
+	div#message, div.bbp-template-notice {
+		border: none !important;
+		background: white !important;
+		padding: 0;
+
+		p {
+			background: white !important;
+			border: none !important;
+			border-left: 4px solid orange !important;
+			padding: 1em 1em 1em 2em !important;
+			box-shadow: 1px 1px 1px #ccc;
+		}
+
+		&.updated p {
+			border-color: green;
+		}
+
+	}
+
+
+
+}

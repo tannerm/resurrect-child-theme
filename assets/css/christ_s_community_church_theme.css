@@ -17,3 +17,79 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
+#buddypress {
+  /* Forums
+  ------------------------------------------------------------*/
+  /* Form Elements
+  ------------------------------------------------------------*/
+  /* Messages and Banners
+  ------------------------------------------------------------*/ }
+  #buddypress ul.item-list {
+    clear: none; }
+  #buddypress div.item-list-tabs:first-child {
+    float: left; }
+  #buddypress #group-create-tabs {
+    float: none; }
+  #buddypress #item-nav {
+    width: 15%;
+    margin-right: 5%;
+    float: left; }
+    #buddypress #item-nav div.item-list-tabs ul li {
+      float: none; }
+  #buddypress #item-body {
+    margin-left: 20%; }
+  #buddypress .activity-type-tabs {
+    float: left; }
+  #buddypress div.item-list-tabs#subnav {
+    clear: none;
+    margin-top: 0;
+    float: none; }
+    #buddypress div.item-list-tabs#subnav ul {
+      float: right; }
+  #buddypress .mejs-controls button {
+    padding: 0;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border: 0;
+    background: transparent url(/wp-includes/js/mediaelement/controls.svg) no-repeat; }
+  #buddypress .mejs-controls .mejs-mute button {
+    background-position: -16px -16px; }
+  #buddypress .mejs-controls .mejs-unmute button {
+    background-position: -16px 0; }
+  #buddypress .mejs-controls .mejs-pause button {
+    background-position: 0 -16px; }
+  #buddypress #bbpress-forums {
+    clear: none; }
+  #buddypress input[type="text"] {
+    background: white;
+    border-radius: 5px;
+    padding: .5em 1em;
+    line-height: 1em; }
+  #buddypress input[type="submit"] {
+    height: auto; }
+  #buddypress textarea {
+    background: white; }
+  #buddypress button {
+    padding: 1em 2em; }
+  #buddypress #whats-new:focus {
+    outline: none;
+    border: none; }
+  #buddypress .standard-form#signup_form div div.error {
+    background: white;
+    color: black;
+    padding: .5em 1em .5em 2em;
+    border-left: 4px solid red;
+    box-shadow: 1px 1px 1px #ccc; }
+  #buddypress div#message, #buddypress div.bbp-template-notice {
+    border: none !important;
+    background: white !important;
+    padding: 0; }
+    #buddypress div#message p, #buddypress div.bbp-template-notice p {
+      background: white !important;
+      border: none !important;
+      border-left: 4px solid orange !important;
+      padding: 1em 1em 1em 2em !important;
+      box-shadow: 1px 1px 1px #ccc; }
+    #buddypress div#message.updated p, #buddypress div.bbp-template-notice.updated p {
+      border-color: green; }
