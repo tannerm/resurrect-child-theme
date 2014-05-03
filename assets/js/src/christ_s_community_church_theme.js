@@ -5,9 +5,9 @@
  * Copyright (c) 2013 Tanner
  * Licensed under the GPLv2+ license.
  */
- 
- ( function( window, undefined ) {
+
+( function( window, $, undefined ) {
 	'use strict';
 
 
- } )( this );
+} )( this, jQuery );

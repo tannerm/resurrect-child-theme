@@ -45,6 +45,9 @@ define( 'CCC_VERSION', '0.1.1' );
 	wp_enqueue_script( 'ccc', get_stylesheet_directory_uri() . "/assets/js/christ_s_community_church_theme{$postfix}.js", array(), CCC_VERSION, true );
 		
 	wp_enqueue_style( 'ccc', get_stylesheet_directory_uri() . "/assets/css/christ_s_community_church_theme{$postfix}.css", array(), CCC_VERSION );
+
+	wp_enqueue_script('utils');
+	wp_enqueue_script('user-profile');
  }
  add_action( 'wp_enqueue_scripts', 'ccc_scripts_styles' );
  
@@ -78,24 +81,56 @@ function ccc_is_member() {
 new CCC_Setup;
 class CCC_Setup {
 
-	var $bp_templates = array( 'bp_group', 'bp_members', 'bp_register', 'bp_activity', 'bp_blogs' );
+	/**
+	 * @var string
+	 */
+	public static $template_parts_path = 'page-templates/parts/';
+
+	/**
+	 * @var array
+	 */
+	protected $bp_templates = array( 'bp_group', 'bp_members', 'bp_register', 'bp_activity', 'bp_blogs' );
 
 	function __construct() {
-		add_filter( 'resurrect_sidebar_enabled', array( $this, 'sidebar_enabled'     ) );
-		add_filter( 'ctfw_make_friendly',        array( $this, 'bp_templates' ), 10, 2 );
+		$this->includes();
+		add_filter( 'resurrect_sidebar_enabled',  array( $this, 'sidebar_enabled'     ) );
+		add_filter( 'ctfw_make_friendly',         array( $this, 'bp_templates' ), 10, 2 );
+		add_filter( 'bp_use_theme_compat_with_current_theme', array( $this, 'allow_page_templates' ) );
+
+		add_filter( 'resurrect_social_icons', array( $this, 'custom_icons' ) );
+
+		// remove_filter( 'bp_template_include',   'bp_template_include_theme_compat', 4, 2 );
 	}
 
-	function sidebar_enabled( $enabled ) {
+	protected function includes() {
+		include( __DIR__ . '/includes/members.php' );
+	}
+
+	public function sidebar_enabled( $enabled ) {
 		if ( in_array( get_post_type(), $this->bp_templates ) ) {
 			return false;
 		}
 		return $enabled;
 	}
 
-	function bp_templates( $rewrite, $template ) {
+	public function bp_templates( $rewrite, $template ) {
 		if ( in_array( $template, $this->bp_templates ) ) {
 			return 'bp';
 		}
 		return $rewrite;
 	}
+
+	public function allow_page_templates( $compatibility ) {
+		if ( get_page_template_slug() === 'page-templates/members.php' ) {
+			return false;
+		}
+
+		return $compatibility;
+	}
+
+	public function custom_icons( $icons ) {
+		$icons = str_replace( '</ul>', '<li><a href="/calendar" class="resurrect-icon-calendar" title="Calendar" target="_blank"></a></li></ul>', $icons );
+		return $icons;
+	}
+
 }

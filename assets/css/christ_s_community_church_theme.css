@@ -17,6 +17,46 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
+#resurrect-top .resurrect-search-button {
+  font-size: 1em; }
+#resurrect-top .login-button {
+  display: inline;
+  border-left: solid 1px;
+  margin-left: .5em;
+  padding-left: .5em; }
+
+input {
+  line-height: 1em; }
+
+div.message {
+  background: white;
+  border: none;
+  border-left: 4px solid orange;
+  padding: 0 1em;
+  box-shadow: 1px 1px 1px #ccc;
+  margin: .5em auto; }
+  div.message p {
+    padding: .5em; }
+  div.message.error {
+    border-color: #f2232b; }
+
+#ctdir_dashboard_login .form {
+  min-width: 400px;
+  width: 49%;
+  float: left; }
+  #ctdir_dashboard_login .form .honeypot {
+    display: none; }
+
+#pass-strength-result {
+  width: 15em;
+  padding: .5em 1em;
+  background: white;
+  border-left: 5px solid orange; }
+  #pass-strength-result.short {
+    border-color: #f2232b; }
+  #pass-strength-result.strong {
+    border-color: #14CA1C; }
+
 #buddypress {
   /* Forums
   ------------------------------------------------------------*/

@@ -1,8 +1,8 @@
-/*! Christ's Community Church Theme - v0.1.0 - 2013-10-05
+/*! Christ's Community Church Theme - v0.1.0 - 2014-04-27
  * http://wordpress.org/themes
- * Copyright (c) 2013; * Licensed GPLv2+ */
-( function( window, undefined ) {
+ * Copyright (c) 2014; * Licensed GPLv2+ */
+( function( window, $, undefined ) {
 	'use strict';
 
 
- } )( this );
+} )( this, jQuery );

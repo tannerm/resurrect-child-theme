@@ -21,6 +21,66 @@ of the styles inside media queries.
 
 @import url("../../../resurrect/style.css");
 
+#resurrect-top {
+	.resurrect-search-button {
+		font-size: 1em;
+	}
+	.login-button {
+		display: inline;
+		border-left: solid 1px;
+		margin-left: .5em;
+		padding-left: .5em;
+	}
+}
+
+input {
+	line-height: 1em;
+}
+
+div.message {
+	background: white;
+	border: none;
+	border-left: 4px solid orange;
+	padding: 0 1em;
+	box-shadow: 1px 1px 1px #ccc;
+	margin: .5em auto;
+
+	p {
+		padding: .5em;
+	}
+	
+	&.error {
+		border-color: #f2232b;
+	}
+}
+
+#ctdir_dashboard_login .form {
+	min-width: 400px;
+	width: 49%;
+	float: left;
+
+	.honeypot {
+		display: none;
+	}
+}
+
+#pass-strength-result {
+	width: 15em;
+	padding: .5em 1em;
+	background: white;
+	border-left: 5px solid orange;
+
+	&.short {
+		border-color: #f2232b;
+	}
+
+	&.strong {
+	border-color: #14CA1C;
+	}
+}
+
+
+
 #buddypress {
 
 	ul.item-list {
@@ -146,7 +206,5 @@ of the styles inside media queries.
 		}
 
 	}
-
-
 
 }
