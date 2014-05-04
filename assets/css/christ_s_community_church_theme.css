@@ -17,6 +17,18 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
+a,
+a:hover,
+.resurrect-list-icons a:hover,
+a:hover .resurrect-text-icon,
+#resurrect-top-menu-links li a:hover,
+.resurrect-header-right-item a:hover,
+.js .selectnav:hover, .js .selectnav:focus,
+#resurrect-banner .ctfw-breadcrumbs a:hover,
+#resurrect-content-inner .ctfw-breadcrumbs a:hover,
+.resurrect-comment-meta time:hover {
+  color: #009393; }
+
 #resurrect-top .resurrect-search-button {
   font-size: 1em; }
 #resurrect-top .login-button {

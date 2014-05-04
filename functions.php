@@ -13,7 +13,7 @@
  */
  
  // Useful global constants
-define( 'CCC_VERSION', '0.1.1' );
+define( 'CCC_VERSION', '0.1.2' );
  
  /**
   * Set up theme defaults and register supported WordPress features.
@@ -49,7 +49,7 @@ define( 'CCC_VERSION', '0.1.1' );
 	wp_enqueue_script('utils');
 	wp_enqueue_script('user-profile');
  }
- add_action( 'wp_enqueue_scripts', 'ccc_scripts_styles' );
+ add_action( 'wp_enqueue_scripts', 'ccc_scripts_styles', 20 );
  
  /**
   * Add humans.txt to the <head> element.
