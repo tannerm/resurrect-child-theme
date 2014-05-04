@@ -129,7 +129,7 @@ class CCC_Setup {
 	}
 
 	public function custom_icons( $icons ) {
-		$icons = str_replace( '</ul>', '<li><a href="/calendar" class="resurrect-icon-calendar" title="Calendar" target="_blank"></a></li></ul>', $icons );
+		$icons = str_replace( '</ul>', '<li><a href="/calendar" class="el-icon-calendar" title="Calendar" target="_blank"></a></li></ul>', $icons );
 		return $icons;
 	}
 
