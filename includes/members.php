@@ -149,7 +149,7 @@ function ccc_login_form() {
 		$text = "Welcome, " . ucwords( $user->display_name );
 	}
 
-	printf( '<a href="/wp-admin" class="resurrect-icon-user resurrect-text-icon"> %s</a>', $text );
+	printf( '<a href="/wp-admin" class="el-icon-user resurrect-text-icon"> %s</a>', $text );
 
 }
 
