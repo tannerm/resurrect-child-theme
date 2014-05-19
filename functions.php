@@ -121,7 +121,7 @@ class CCC_Setup {
 	}
 
 	public function allow_page_templates( $compatibility ) {
-		if ( get_page_template_slug() === 'page-templates/members.php' && ! is_user_logged_in() ) {
+		if ( get_page_template_slug() === 'page-templates/members.php' && ! ccc_is_member() ) {
 			return false;
 		}
 
