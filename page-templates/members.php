@@ -31,10 +31,9 @@ get_header(); // header.php ?>
 
 			<div class="resurrect-content-block resurrect-content-block-close resurrect-clearfix">
 				<h1>Members</h1>
-				<?php
-				// loop.php shows single or multiple posts
-				get_template_part( CCC_Setup::$template_parts_path . $template );
-				?>
+				<?php while( have_posts() ) : the_post(); ?>
+					<?php get_template_part( CCC_Setup::$template_parts_path . $template ); ?>
+				<?php endwhile; ?>
 
 			</div>
 

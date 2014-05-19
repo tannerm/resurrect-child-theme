@@ -143,13 +143,15 @@ class CCC_Dashboard {
 
 function ccc_login_form() {
 	$text = "Login";
+	$link = "/wp-admin";
 
 	if ( is_user_logged_in() ) {
 		$user = get_user_by( 'id', get_current_user_id() );
 		$text = "Welcome, " . ucwords( $user->display_name );
+		$link = bbp_get_user_profile_url( get_current_user_id() );
 	}
 
-	printf( '<a href="/wp-admin" class="el-icon-user resurrect-text-icon"> %s</a>', $text );
+	printf( '<a href="%s" class="el-icon-user resurrect-text-icon"> %s</a>', esc_url( $link ), $text );
 
 }
 

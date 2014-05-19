@@ -1,4 +1,3 @@
-<h1>TEST</h1>
 <div id="buddypress">
 
 	<?php if ( bp_has_groups() ) : while ( bp_groups() ) : bp_the_group(); ?>

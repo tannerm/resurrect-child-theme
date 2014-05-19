@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
 	<div class="resurrect-entry-content resurrect-clearfix">
 
-		<?php //the_content(); ?>
+		<?php the_content(); ?>
 
 		<?php do_action( 'resurrect_after_content' ); ?>
 

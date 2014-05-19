@@ -121,7 +121,15 @@ class CCC_Setup {
 	}
 
 	public function allow_page_templates( $compatibility ) {
-		if ( get_page_template_slug() === 'page-templates/members.php' ) {
+		if ( get_page_template_slug() === 'page-templates/memberss.php' ) {
+
+			add_filter( 'the_content', 'bp_replace_the_content' );
+
+			// Add BuddyPress's head action to wp_head
+			if ( ! has_action( 'wp_head', 'bp_head' ) ) {
+				add_action( 'wp_head', 'bp_head' );
+			}
+
 			return false;
 		}
 
