@@ -121,7 +121,7 @@ class CCC_Setup {
 	}
 
 	public function allow_page_templates( $compatibility ) {
-		if ( get_page_template_slug() === 'page-templates/memberss.php' ) {
+		if ( get_page_template_slug() === 'page-templates/members.php' ) {
 
 			add_filter( 'the_content', 'bp_replace_the_content' );
 
