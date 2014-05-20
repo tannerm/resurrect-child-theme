@@ -103,7 +103,8 @@ class CCC_Setup {
 	}
 
 	protected function includes() {
-		include( __DIR__ . '/includes/members.php' );
+		include( __DIR__ . '/includes/members.php'         );
+		include( __DIR__ . '/includes/bp_custom.class.php' );
 	}
 
 	public function sidebar_enabled( $enabled ) {
