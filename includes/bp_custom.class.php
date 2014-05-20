@@ -53,7 +53,7 @@ class CCC_BP_Custom {
 		$subject = sprintf( 'New Topic Posted In: %s', get_the_title( $forum_id ) );
 
 		$headers = array( 'Content-Type: text/html; charset=UTF-8' );
-		wp_mail( $user->email, $subject, $content, $headers );
+		wp_mail( $user->user_email, $subject, $content, $headers );
 	}
 
 }
