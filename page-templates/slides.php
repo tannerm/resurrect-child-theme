@@ -2,9 +2,23 @@
 
 /* Template Name: Slides */
 
+global $wp_registered_widgets;
+
+$widgets = wp_get_sidebars_widgets();
+$widgets = $widgets['ctcom-home-slider'];
+
+$slides = get_option('widget_ctfw-slide');
+
+foreach( $slides as $id => $slide ) {
+
+	if ( ! is_array( $slide ) || ! in_array( "ctfw-slide-$id", $widgets ) ) {
+		unset( $slides[$id] );
+	}
+
+}
+
 $postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
-$reveal_url = get_stylesheet_directory_uri() . '/lib/reveal-js/';
-$slides = get_option('widget_ctfw-slide'); ?>
+$reveal_url = get_stylesheet_directory_uri() . '/lib/reveal-js/'; ?>
 
 <!doctype html>
 <html lang="en" class="slides">
