@@ -224,31 +224,36 @@ div.message {
 html.slides {
 	margin-top: 0 !important;
 
-	.slides > section {
-		text-align: left;
-		top: auto;
-		bottom: 60%;
+	.slides {
+		left: 0;
 
-		.flex-title {
-			display: inline-block;
-			float: left;
-			padding: 15px 30px 15px 20px;
-			font-size: 4em;
-			font-weight: normal;
-			line-height: 1.2em;
-			text-transform: uppercase;
-			position: relative;
-			font-family: 'Oswald', Arial, Helvetica, sans-serif;
-			background: rgba( 0, 0, 0, .8);
-		}
-		.flex-description {
-			font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-			font-size: 2em;
-			line-height: 1.4em;
-			padding: 15px 20px;
-			font-weight: normal;
-			font-style: italic;
-			background: rgba( 255, 255, 255, .8);
+		> section {
+			left: 0;
+			text-align: left;
+			top: auto;
+			bottom: 60%;
+
+			.flex-title {
+				display: inline-block;
+				float: left;
+				padding: 15px 30px 15px 40px;
+				font-size: 4em;
+				font-weight: normal;
+				line-height: 1.2em;
+				text-transform: uppercase;
+				position: relative;
+				font-family: 'Oswald', Arial, Helvetica, sans-serif;
+				background: rgba( 0, 0, 0, .8);
+			}
+			.flex-description {
+				font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+				font-size: 2em;
+				line-height: 1.4em;
+				padding: 15px 40px;
+				font-weight: normal;
+				font-style: italic;
+				background: rgba( 255, 255, 255, .8);
+			}
 		}
 	}
 }
