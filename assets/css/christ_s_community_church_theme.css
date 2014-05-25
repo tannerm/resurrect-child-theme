@@ -145,3 +145,29 @@ div.message {
       box-shadow: 1px 1px 1px #ccc; }
     #buddypress div#message.updated p, #buddypress div.bbp-template-notice.updated p {
       border-color: green; }
+
+html.slides {
+  margin-top: 0 !important; }
+  html.slides .slides > section {
+    text-align: left;
+    top: auto;
+    bottom: 60%; }
+    html.slides .slides > section .flex-title {
+      display: inline-block;
+      float: left;
+      padding: 15px 30px 15px 20px;
+      font-size: 4em;
+      font-weight: normal;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      position: relative;
+      font-family: 'Oswald', Arial, Helvetica, sans-serif;
+      background: rgba(0, 0, 0, 0.8); }
+    html.slides .slides > section .flex-description {
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+      font-size: 2em;
+      line-height: 1.4em;
+      padding: 15px 20px;
+      font-weight: normal;
+      font-style: italic;
+      background: rgba(255, 255, 255, 0.8); }
