@@ -55,7 +55,8 @@ $slides = get_option('widget_ctfw-slide'); ?>
 
 		<?php foreach( $slides as $slide ) : ?>
 			<?php if ( ! is_array( $slide ) ) continue; ?>
-			<section data-background="<?php echo wp_get_attachment_image_src( $slide['image_id'], 'large' )[0]; ?>">
+			<?php $img = wp_get_attachment_image_src( $slide['image_id'], 'large' ); ?>
+			<section data-background="<?php if ( ! empty( $img[0] ) ) echo $img[0] ; ?>">
 				<?php if ( $slide['title'] ) : ?>
 					<h1 class="flex-title"><?php echo $slide['title']; ?></h1>
 				<?php endif; ?>
